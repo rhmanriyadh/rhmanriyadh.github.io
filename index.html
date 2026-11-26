@@ -328,16 +328,17 @@ footer .mono{color:var(--ink)}
      p:["Luhn validation, a substitution cipher, readability scoring, sorting analysis and Tideman voting.","Rewrote CS50 library code in standard C with pointers, structs and dynamic memory."], tags:["C","Algorithms","Memory"]},
     {c:"var(--bone)", g:"Φ", t:"Stoicism in modern education", m:"Research paper · Academic Writing",
      p:["Wrote a research paper linking Stoic philosophy to cognitive behavioural therapy.","Presented the findings to the class."], tags:["Research","Writing","Presentation"]},
-    {big:1, c:"var(--orange)", g:"$_", t:"Server administration and security labs", m:"CSIT2305 · Fall 2026 · 15 weeks of hands-on labs",
-     p:["Built a VirtualBox home lab with Ubuntu Server and Windows Server; managed users, groups and permissions (chmod/chown, NTFS).",
-        "Set up SSH key and RDP remote access, DHCP and DNS servers, an Apache2 web server, SFTP file sharing and LDAP directory services.",
-        "Secured the lab with UFW and iptables/nftables firewall rules, a virtual firewall/router, network segmentation and a VPN; hardened servers and read logs with journalctl.",
-        "Scanned and documented exposed services with Nmap, Wireshark and OpenVAS; covered backups with rsync, CIS Benchmarks and incident response, ending in a team capstone."],
-     tags:["Ubuntu Server","Windows Server","SSH","DNS/DHCP","Apache2","LDAP","Firewalls","VPN","Nmap","Wireshark"]},
+    {big:1, c:"var(--orange)", g:"$_", t:"Server administration and security labs", m:"CSIT2305 · Fall 2026 · hands-on labs on Ubuntu Server",
+     p:["Built an Ubuntu Server VM in VirtualBox and ran LDAP directory services, SFTP file sharing and an Apache2 web server on it.",
+        "Configured a UFW firewall with default deny: allowed only needed ports, rate-limited SSH against brute force, and logged blocked traffic.",
+        "Read server logs with journalctl, grep and pipes to find failed SSH logins and rank the source addresses.",
+        "Scanned my own and a partner's VM with Nmap (with permission), read open, closed and filtered ports, and traced the scan in the firewall logs.",
+        "Backed up data with rsync, deleted it on purpose and restored it, then sent an off-site copy to a partner's server over SSH."],
+     tags:["Ubuntu Server","VirtualBox","LDAP","SFTP","Apache2","UFW","journalctl","Nmap","rsync"]},
     {big:1, c:"var(--cyan)", g:"IOS", t:"Network Essentials labs", m:"Network Essentials",
      p:["Built and configured networks in Cisco Packet Tracer.","Configured Cisco IOS for VTY remote access, DHCP, DNS and STP."], tags:["Packet Tracer","Cisco IOS"]}
   ];
-  
+
   document.getElementById("heap").innerHTML = projects.map((x, i) => `
     <article class="blk${x.big ? " big" : ""}" style="--c:${x.c}">
       <div class="sw">
