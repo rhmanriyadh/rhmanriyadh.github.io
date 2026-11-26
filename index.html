@@ -356,10 +356,9 @@ footer .mono{color:var(--ink)}
 
   const frames = [
     ["var(--blue)", "data_officer()", "AUK Student Government", "Handle data for the student government."],
-    ["var(--yellow)", "event_coordinator()", "HacAUK tech club", "Plan workshops and events for tech students each semester, including a \"Bug Hunt\" spot-the-bug activity."],
-    ["var(--red)", "speaker_training()", "TEDxAUK · 2026", "Reviewed speaker drafts and gave written, per-speaker feedback on accuracy, structure, storytelling and timing."],
-    ["var(--green)", "class_group_founder()", "Microsoft Teams group · 2025 to now", "Started and run a group for classmates with course updates, announcements and deadlines."],
-    ["var(--cyan)", "volunteer()", "AUK campus events · 2025 to 2026", "IT Assistant at Got Business Talent, VIP Gate Receptionist at Graduation, guide at Open House 2025, ticket sales at Giving Tuesday."]
+    ["var(--yellow)", "event_coordinator()", "HacAUK tech club", "Plan workshops and events for tech students each semester."],
+    ["var(--red)", "speaker_training()", "TEDxAUK · 2026", "Reviewed speaker drafts and gave per-speaker feedback on accuracy, structure, storytelling and timing."],
+    ["var(--cyan)", "volunteer()", "AUK campus events · 2025 to 2026", "Receptionist and usher at MEPS 2026, VIP Gate Receptionist at Graduation, IT Assistant at Got Business Talent, guide at Open House 2025-2026."]
   ];
   document.getElementById("stack").innerHTML = frames.map(([c, f, o, d], i) => `
     <li class="frame" style="--c:${c}"><span class="n">#${i}</span><div class="f">${f}<small>${o}</small></div><p>${d}</p></li>`).join("");
